@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/xchdtk/node-postgresql#readme",
   "dependencies": {
+    "@prisma/client": "^2.28.0",
     "express": "^4.17.1",
     "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "prisma": "^2.28.0"
   }
 }
