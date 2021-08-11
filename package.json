@@ -2,8 +2,11 @@
   "name": "node-postgresql",
   "version": "1.0.0",
   "description": "node.js와 postgresql를 연결하고 학습해봅니다",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "build": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,8 +22,10 @@
   "homepage": "https://github.com/xchdtk/node-postgresql#readme",
   "dependencies": {
     "@prisma/client": "^2.28.0",
-    "express": "^4.17.1",
-    "pg": "^8.7.1"
+    "@types/express": "^4.17.13",
+    "pg": "^8.7.1",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
     "prisma": "^2.28.0"

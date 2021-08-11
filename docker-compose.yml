@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+    node:
+        image: node
+        restart: always
+        container_name: server
+        build:
+            context: ./
+            dockerfile: Dockerfile.dev
+        volumes:
+            - ./:/app
+        ports:
+            - 3000:3000
+    db:
+        image: postgres
+        restart: always
+        container_name: pstgdb
+        # volumes: 
+        #     - ./dbdata:/var/lib/postgresql/data
+        environment:
+            DB_PW: xwlstn12
+            DB_USER: xchdtk
+        ports:
+            - 5432:5432
